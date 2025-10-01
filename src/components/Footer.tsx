@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Linkedin, Github } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,7 +17,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">CodeCraftsmen</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img src={logo} alt="CodeCraftsmen Logo" className="h-10 w-10" />
+              <h3 className="text-2xl font-bold">CodeCraftsmen</h3>
+            </div>
             <p className="text-background/80 leading-relaxed">
               Transforming insurance platforms with expert Guidewire solutions and
               consulting services.
@@ -31,7 +35,7 @@ const Footer = () => {
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
-                    className="text-background/80 hover:text-background transition-smooth"
+                    className="text-background/80 hover:text-background transition-smooth relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-background after:transition-all hover:after:w-full"
                   >
                     {link}
                   </a>
@@ -49,7 +53,7 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-smooth"
+                  className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-all hover:scale-110 hover:-translate-y-1"
                 >
                   <social.icon size={20} />
                 </a>

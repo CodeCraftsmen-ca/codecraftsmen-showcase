@@ -1,4 +1,5 @@
 import { CheckCircle } from "lucide-react";
+import teamImage from "@/assets/about-team.jpg";
 
 const About = () => {
   const capabilities = [
@@ -11,7 +12,7 @@ const About = () => {
   return (
     <section id="about" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Who We Are
@@ -22,6 +23,15 @@ const About = () => {
               enhance customer experience, and increase underwriting and claims efficiency
               to accomplish strategic objectives.
             </p>
+          </div>
+
+          {/* Team Image */}
+          <div className="mb-12 animate-fade-in overflow-hidden rounded-2xl shadow-large">
+            <img 
+              src={teamImage} 
+              alt="CodeCraftsmen Team" 
+              className="w-full h-80 object-cover"
+            />
           </div>
 
           <div className="bg-card rounded-2xl p-8 md:p-12 shadow-large animate-fade-in">

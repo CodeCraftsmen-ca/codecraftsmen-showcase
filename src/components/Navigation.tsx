@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,9 +49,12 @@ const Navigation = () => {
               e.preventDefault();
               scrollToSection("#home");
             }}
-            className="text-2xl font-bold text-primary"
+            className="flex items-center gap-3 group"
           >
-            CodeCraftsmen
+            <img src={logo} alt="CodeCraftsmen Logo" className="h-10 w-10 transition-transform group-hover:scale-110" />
+            <span className="text-2xl font-bold text-primary transition-colors group-hover:text-primary-hover">
+              CodeCraftsmen
+            </span>
           </a>
 
           {/* Desktop Navigation */}
@@ -63,7 +67,7 @@ const Navigation = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="text-sm font-medium text-foreground hover:text-primary transition-smooth"
+                className="text-sm font-medium text-foreground hover:text-primary transition-smooth relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
               >
                 {link.label}
               </a>
@@ -98,7 +102,7 @@ const Navigation = () => {
                     e.preventDefault();
                     scrollToSection(link.href);
                   }}
-                  className="text-sm font-medium text-foreground hover:text-primary transition-smooth px-4 py-2"
+                  className="text-sm font-medium text-foreground hover:text-primary transition-smooth px-4 py-2 relative after:absolute after:bottom-0 after:left-4 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-[calc(100%-2rem)]"
                 >
                   {link.label}
                 </a>

@@ -25,7 +25,7 @@ const Insurers = () => {
           {insurers.map((insurer, index) => (
             <div
               key={index}
-              className="bg-card rounded-xl p-8 shadow-soft hover:shadow-medium transition-smooth flex items-center justify-center animate-fade-in cursor-pointer group"
+              className="bg-card rounded-xl p-8 shadow-soft hover:shadow-medium transition-all hover:-translate-y-2 flex items-center justify-center animate-fade-in cursor-pointer group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="text-center">

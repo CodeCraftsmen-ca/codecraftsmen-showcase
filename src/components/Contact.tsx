@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import mapImage from "@/assets/map-location.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -80,7 +81,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
                     <a
                       href="mailto:info@codecraftsmen.com"
-                      className="text-muted-foreground hover:text-primary transition-smooth"
+                      className="text-muted-foreground hover:text-primary transition-smooth relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
                     >
                       info@codecraftsmen.com
                     </a>
@@ -95,7 +96,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-foreground mb-1">Phone</h4>
                     <a
                       href="tel:+11234567890"
-                      className="text-muted-foreground hover:text-primary transition-smooth"
+                      className="text-muted-foreground hover:text-primary transition-smooth relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
                     >
                       +1 (123) 456-7890
                     </a>
@@ -118,12 +119,13 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="bg-muted rounded-xl h-64 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="text-primary mx-auto mb-2" size={48} />
-                <p className="text-muted-foreground">Map Location</p>
-              </div>
+            {/* Map Image */}
+            <div className="rounded-xl h-64 overflow-hidden shadow-medium">
+              <img 
+                src={mapImage} 
+                alt="Office Location Map" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform"
+              />
             </div>
           </div>
 
