@@ -2,9 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import mapImage from "@/assets/map-location.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -80,10 +79,10 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
                     <a
-                      href="mailto:info@codecraftsmen.com"
+                      href="mailto:info@codecraftsmen.ca"
                       className="text-muted-foreground hover:text-primary transition-smooth relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
                     >
-                      info@codecraftsmen.com
+                      info@codecraftsmen.ca
                     </a>
                   </div>
                 </div>
@@ -94,38 +93,23 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Phone</h4>
-                    <a
-                      href="tel:+11234567890"
-                      className="text-muted-foreground hover:text-primary transition-smooth relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
-                    >
-                      +1 (123) 456-7890
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-1">Office</h4>
-                    <p className="text-muted-foreground">
-                      123 Tech Avenue
-                      <br />
-                      San Francisco, CA 94105
-                    </p>
+                    <div className="space-y-1">
+                      <a
+                        href="tel:+12048812535"
+                        className="block text-muted-foreground hover:text-primary transition-smooth relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                      >
+                        +1 (204) 881-2535
+                      </a>
+                      <a
+                        href="tel:+16472700907"
+                        className="block text-muted-foreground hover:text-primary transition-smooth relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                      >
+                        +1 (647) 270-0907
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Map Image */}
-            <div className="rounded-xl h-64 overflow-hidden shadow-medium">
-              <img 
-                src={mapImage} 
-                alt="Office Location Map" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform"
-              />
             </div>
           </div>
 

@@ -29,12 +29,10 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10 text-center">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Transform Your Insurance Core Platforms
+            Crafting Digital Excellence with Guidewire Solutions
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-            Accelerate your digital transformation journey with CodeCraftsmen's expert
-            Guidewire capabilities. Maximize ROI, reduce IT spend, and achieve faster
-            time-to-market.
+            CodeCraftsmen empowers insurers with modern Guidewire transformation services, delivering innovation, agility, and superior customer experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button

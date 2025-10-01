@@ -52,7 +52,9 @@ const Navigation = () => {
             className="flex items-center gap-3 group"
           >
             <img src={logo} alt="CodeCraftsmen Logo" className="h-10 w-10 transition-transform group-hover:scale-110" />
-            <span className="text-2xl font-bold text-primary transition-colors group-hover:text-primary-hover">
+            <span className={`text-2xl font-bold transition-colors group-hover:opacity-80 ${
+              isScrolled ? "text-primary" : "text-white"
+            }`}>
               CodeCraftsmen
             </span>
           </a>
@@ -67,14 +69,21 @@ const Navigation = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="text-sm font-medium text-foreground hover:text-primary transition-smooth relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                className={`text-sm font-medium transition-smooth relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:transition-all hover:after:w-full ${
+                  isScrolled 
+                    ? "text-foreground hover:text-primary after:bg-primary" 
+                    : "text-white hover:text-white/80 after:bg-white"
+                }`}
               >
                 {link.label}
               </a>
             ))}
             <Button
               onClick={() => scrollToSection("#contact")}
-              className="bg-primary hover:bg-primary-hover transition-smooth"
+              className={isScrolled 
+                ? "bg-primary hover:bg-primary-hover transition-smooth" 
+                : "bg-white text-primary hover:bg-white/90 transition-smooth"
+              }
             >
               Get Started
             </Button>
@@ -82,7 +91,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className={`md:hidden transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
